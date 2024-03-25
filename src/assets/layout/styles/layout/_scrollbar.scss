@@ -1,0 +1,32 @@
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0.6em; /* Set the width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #666; /* Color of the thumb */
+    border-radius: 0.5em; /* Radius of the thumb */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the track */
+  }
+
+//   ::-webkit-scrollbar-button {
+//     background-color: #666; /* Color of the button */
+//     border-radius: 0.5em; /* Radius of the button */
+//   }
+
+
+
+  /* For Firefox */
+  /* Note: You can customize Firefox scrollbar only with the -moz prefix */
+  /* It's important to note that Firefox provides limited styling options for the scrollbar */
+  /* This example sets the color of the thumb */
+  /* You can experiment with other properties for Firefox */
+  * {
+    scrollbar-color: #666 #f1f1f1;
+  }
+
+
+

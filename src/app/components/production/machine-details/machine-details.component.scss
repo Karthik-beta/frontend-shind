@@ -1,0 +1,34 @@
+.stat-badge {
+    border-radius: var(--border-radius);
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.stat-badge {
+    &.stat-Active {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.stat-Idle {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.stat-NoResponse {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-lowstock {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+}
+
+.nav-click {
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+<div [ngStyle]="{borderRadius: '1rem', background: 'linear-gradient(0deg, rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), linear-gradient(92.54deg, #1C80CF 47.88%, #FFFFFF 100.01%)', padding: '1em'}">
+    <!-- <div [ngStyle]="{borderRadius: '1rem', background: 'yellow'}"> -->
+        <div class="card title-card-with-time">
+            <h2 class="text-800 font-bold text-xl lg:text-2xl">Order Distribution / Delivery Efficiency</h2>
+            <!-- <h5 class="text-800 font-bold">{{ currentDate | date:'fullDate' }} - {{ currentDate | date:'shortTime' }}</h5> -->
+            <app-time></app-time>
+        </div>
+
+        <div class="card">
+            <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+        </div>
+</div>

@@ -1,0 +1,9 @@
+.performance-cell::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px; /* Adjust the width as needed */
+    background-color: #000; /* Change the color as needed */
+}
