@@ -21,10 +21,10 @@ export class MachineDetailsComponent implements OnInit {
 
     machineList = [
         {
-            plant: 'Chennai',
-            shopfloor: 'Shopfloor - 1',
-            assemblyline: 'Assemblyline - 1',
-            machine_id: 'BL-3-A',
+            plant: 'Bangalore',
+            shopfloor: 'Production',
+            assemblyline: 'Line - 1',
+            machine_id: 'SMT',
             start_prod: '2024-01-11, 08 - 20 (11)',
             end_prod: '2024-03-09, 08 - 20 (6.0)',
             state: 'ACTIVE',

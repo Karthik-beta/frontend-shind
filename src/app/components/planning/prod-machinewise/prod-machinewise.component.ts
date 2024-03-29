@@ -554,10 +554,10 @@ export class ProdMachinewiseComponent implements OnInit{
 
     singleMachineList = [
         {
-            plant: 'Chennai',
-            shopfloor: 'Shopfloor - 1',
-            assemblyline: 'Assemblyline - 1',
-            machine_id: 'BL-3-A',
+            plant: 'Bangalore',
+            shopfloor: 'Production',
+            assemblyline: 'Line - 1',
+            machine_id: 'SMT',
             start_prod: '2023-12-11, 08 - 20 (11)',
             end_prod: '2024-02-09, 08 - 20 (6.0)',
             state: 'ACTIVE',
@@ -674,11 +674,18 @@ export class ProdMachinewiseComponent implements OnInit{
         const currentHour = currentDateTime.getHours();
 
         // Check if the current hour is between 8 and 20 (8:00 AM to 8:00 PM)
-        if (currentHour >= 8 && currentHour < 20) {
-          return 'Shift A, 08 - 20 (11)';
-        } else {
-          return 'Shift B, 20 - 08 (11)';
+        switch (true) {
+            case currentHour >= 8 && currentHour < 14:
+                return 'Shift A, 06 - 14 (7)';
+            case currentHour >= 14 || currentHour < 22:
+                return 'Shift B, 14 - 22 (7)';
+            case currentHour >= 22 && currentHour < 6:
+                return 'Shift C, 22 - 06 (7)';
+            default:
+                // Add your additional case statements here
+                return 'Shift A, 06 - 14 (7)';
         }
+
     }
 
     currentShift = this.getShift();

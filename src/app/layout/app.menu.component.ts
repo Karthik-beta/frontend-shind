@@ -87,8 +87,12 @@ export class AppMenuComponent implements OnInit {
                             items: [
                                 { label: 'Plant', icon: 'fa-solid fa-industry', routerLink: ['/plantwise'] },
                                 { label: 'Shopfloor', icon: 'fa-solid fa-building', routerLink: ['/shopfloorwise'] },
-                                { label: 'Assemblyline', icon: 'fa-solid fa-cogs', routerLink: ['/assemblylinewise'] },
-                                { label: 'Spell Assemblyline', icon: 'fa-solid fa-cogs', routerLink: ['/spell_assemblyline'] },
+                                // { label: 'Assemblyline', icon: 'fa-solid fa-cogs', routerLink: ['/assemblylinewise'] },
+                                { label: 'Assemblyline', icon: 'fa-solid fa-cogs',
+                                items: [
+                                    { label: 'Line 1', icon: 'fa-solid fa-industry', routerLink: ['/spell_assemblyline'] },
+                                ]
+                            },
                                 { label: 'Machine', icon: 'fa-solid fa-cog', routerLink: ['/machine_details'] },
                                 { label: 'Production Info', icon: 'fa-solid fa-table', routerLink: ['/prod_info'] }
                             ]

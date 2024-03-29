@@ -1,27 +1,27 @@
-
 <div class="container-fluid col-md-12 justify-content-center align-items-center d-flex">
-    <div class="row">
-      <div class="col-md-6">
+    <div class="col-12 grid flex justify-content-between mt-2">
+      <div>
         <div class="form-group">
-          <label for="quantity">Machine On Time (min):</label>
-          <input type="number" class="form-control" id="quantity" [(ngModel)]="on_time">
+            <span class="flex-auto">
+                <label class="mb-2 block font-bold" for="mc_on_hours">M/C On Time (Min) :</label>
+                <p-inputNumber id="on_time" [(ngModel)]="on_time" [showButtons]="true" [step]="1" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" buttonLayout="horizontal"> </p-inputNumber>
+            </span>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="productionexpecteddate">Actual Production:</label>
-          <input type="number" class="form-control" id="productionexpecteddate" [(ngModel)]="actual">
+            <span class="flex-auto">
+                <label class="mb-2 block font-bold" for="mc_on_hours">Actual Production :</label>
+                <p-inputNumber id="actual" [(ngModel)]="actual" [showButtons]="true" [step]="1" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" buttonLayout="horizontal"> </p-inputNumber>
+            </span>
         </div>
       </div>
+
+
       <!-- Add other input fields as needed -->
     </div>
-  </div>
+</div>
 
-
-
-
-  <div class="d-flex justify-content-end">
-    <button id="closeButton" type="button" class="btn btn-secondary mr-2 mt-2" data-dismiss="modal">Close</button>
-    <button (click)="updateProductionMachine()" class="btn btn-success mt-2">
-      <i class="pi pi-save"></i> Save </button>
-  </div>
+<div class="d-flex justify-content-end">
+    <button pButton icon="pi pi-save" (click)="updateProductionMachine()" label="Save" class="p-button-success"></button>
+</div>

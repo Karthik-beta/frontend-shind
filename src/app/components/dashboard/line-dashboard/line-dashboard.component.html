@@ -1,0 +1,62 @@
+<div>
+    <div class="grid">
+        <div class="col-3" *ngFor="let item of machineList">
+            <div class="card">
+                <!-- <div class="card-header">
+                    <h6>{{ item.channel }}</h6>
+                </div> -->
+
+                <div class="">
+                    <p-divider align="left">
+                        <span class="p-tag">{{ item.channel }}</span>
+                    </p-divider>
+
+                    <div class="flex justify-content-between">
+                        <div>
+                            <span class="block text-900 font-medium"><img src="assets/demo/images/animatedicons/gears.gif" alt="Gears animation" width="20" height="20">{{ item.machine }}</span>
+                        </div>
+                        <div>
+                            <div class="status-bubble" [ngClass]="{'green': item.status, 'red': !item.status}"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-content-between">
+                        <div>
+                            <span class="block text-900 font-medium"><img src="assets/demo/images/animatedicons/quality.gif" alt="Gears animation" width="20" height="20">Quality</span>
+                        </div>
+                        <div>
+                            <div class="status-bubble" [ngClass]="{'green': item.quality, 'red': !item.quality}"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-content-between">
+                        <div>
+                            <span class="block text-900 font-medium"><img src="assets/demo/images/animatedicons/waves.gif" alt="Gears animation" width="20" height="20">Vibration</span>
+                        </div>
+                        <div>
+                            <div class="status-bubble" [ngClass]="{'green': item.vibration, 'red': !item.vibration}"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-content-between">
+                        <div>
+                            <span class="block text-900 font-medium"><img src="assets/demo/images/animatedicons/health.gif" alt="Gears animation" width="20" height="20">Health</span>
+                        </div>
+                        <div>
+                            <div class="status-bubble" [ngClass]="{'green': item.health, 'red': !item.health}"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-content-between">
+                        <div>
+                            <span class="block text-900 font-medium"><img src="assets/demo/images/animatedicons/alert.gif" alt="Gears animation" width="20" height="20">Alert</span>
+                        </div>
+                        <div>
+                            <span class="alert-badge status-blue">{{ item.alert }}</span><i class="fa-solid fa-arrow-up-right-from-square ml-1" style="color: blue; cursor: pointer;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

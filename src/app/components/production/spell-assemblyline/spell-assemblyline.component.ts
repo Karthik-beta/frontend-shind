@@ -88,11 +88,18 @@ export class SpellAssemblylineComponent implements OnInit {
         const currentHour = currentDateTime.getHours();
 
         // Check if the current hour is between 8 and 20 (8:00 AM to 8:00 PM)
-        if (currentHour >= 8 && currentHour < 20) {
-            return 'Shift A, 07 - 19 (10)';
-          } else {
-            return 'Shift B, 19 - 07 (10)';
+        switch (true) {
+            case currentHour >= 8 && currentHour < 14:
+                return 'Shift A, 06 - 14 (7)';
+            case currentHour >= 14 || currentHour < 22:
+                return 'Shift B, 14 - 22 (7)';
+            case currentHour >= 22 && currentHour < 6:
+                return 'Shift C, 22 - 06 (7)';
+            default:
+                // Add your additional case statements here
+                return 'Shift A, 06 - 14 (7)';
         }
+
     }
 
     currentShift = this.getShift();

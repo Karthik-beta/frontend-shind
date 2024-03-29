@@ -36,9 +36,22 @@
         color: #C63737;
     }
 
+    &.stat-NoResponse {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
     &.status-lowstock {
         background: #FEEDAF;
         color: #8A5340;
     }
 }
 
+.clock {
+    font-size: 2rem;
+    font-family: 'digital-7', sans-serif;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    // color: #df5046;
+    // text-shadow: 0 0 10px #df5046;
+}

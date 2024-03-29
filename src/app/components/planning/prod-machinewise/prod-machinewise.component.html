@@ -53,12 +53,12 @@
 
                     <p-selectButton [options]="stateOptions" [(ngModel)]="showElements" optionLabel="label" optionValue="value"></p-selectButton>
 
-                    <div class="clock-body">
-                        <div>
-                            <p class="text-red-600 block font-bold text-xl">
+                    <div class="flex justify-content-center align-items-center">
+                        <div class="flex justify-content-center align-items-center">
+                            <span class="clock font-bold text-900 block">{{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}</span>
+                            <!-- <p class="text-900 block font-bold font-large text-xl">
                                 {{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}
-                                <!-- <span style="font-size: small;">{{ currentDate | date: ' a':'Asia/Kolkata' }}</span> -->
-                            </p>
+                            </p> -->
                         </div>
                         <div>
                             <p class="text-red-600 block font-bold text-sm">
@@ -110,6 +110,21 @@
                     <th style="min-width: auto">
                         <div class="flex justify-content-between align-items-center">
                             Current Shift
+                        </div>
+                    </th>
+                    <th style="min-width: auto">
+                        <div class="flex justify-content-between align-items-center">
+                            Batch Order Quantity
+                        </div>
+                    </th>
+                    <th style="min-width: auto">
+                        <div class="flex justify-content-between align-items-center">
+                            Order Processed
+                        </div>
+                    </th>
+                    <th style="min-width: auto">
+                        <div class="flex justify-content-between align-items-center">
+                            Order Pending
                         </div>
                     </th>
                     <th style="min-width: auto">
@@ -181,6 +196,12 @@
                         {{ currentShift }}
                     </td>
                     <td style="min-width: auto; white-space: nowrap;">
+                    </td>
+                    <td style="min-width: auto; white-space: nowrap;">
+                    </td>
+                    <td style="min-width: auto; white-space: nowrap;">
+                    </td>
+                    <td style="min-width: auto; white-space: nowrap;">
                         {{ totalOnTime }}
                     </td>
                     <td style="min-width: auto; white-space: nowrap;">
@@ -243,8 +264,8 @@
         </ng-template>
         <ng-template pTemplate="body" let-dataItem>
           <tr class="text-size data-row text-900">
-            <td>AQUA 1000ml</td>
-            <td></td>
+            <td>ACG</td>
+            <td>TEST</td>
             <td>{{ dataItem.time }}</td>
             <!-- <td>{{ dataItem.date }}</td> -->
             <td style="width: auto;">{{ dataItem.on_time | number: '1.2-2' }}</td>
@@ -280,9 +301,9 @@
     <ng-template pTemplate="content">
         <app-add-edit-prod-machinewise [prodmach]="prodmach" *ngIf="ActivateAddEditProductionMachineComp" (prodMachAdded)="onprodMachAdded()"></app-add-edit-prod-machinewise>
     </ng-template>
-    <ng-template pTemplate="footer">
+    <!-- <ng-template pTemplate="footer">
         <button pButton icon="fa-solid fa-x" (click)="closeClick()" (click)="display=false" label="Close" class="p-button-outlined"></button>
         <button pButton icon="fa-solid fa-floppy-disk" (click)="addProductionPlan()" *ngIf="prodplan.employee_id == null" label="Save" class="p-button-success"></button>
         <button pButton icon="fa-solid fa-pencil" (click)="updateProductionPlan()" *ngIf="prodplan.employee_id!= null" label="Update" class="p-button-info"></button>
-    </ng-template>
+    </ng-template> -->
 </p-dialog>

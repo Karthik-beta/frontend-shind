@@ -45,12 +45,12 @@
 
                     <p-selectButton [options]="stateOptions" [(ngModel)]="showElements" optionLabel="label" optionValue="value"></p-selectButton>
 
-                    <div class="clock-body">
-                        <div>
-                            <p class="text-red-600 block font-bold text-xl">
+                    <div class="flex justify-content-center align-items-center">
+                        <div class="flex justify-content-center align-items-center">
+                            <span class="clock font-bold text-900 block">{{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}</span>
+                            <!-- <p class="text-900 block font-bold font-large text-xl">
                                 {{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}
-                                <!-- <span style="font-size: small;">{{ currentDate | date: ' a':'Asia/Kolkata' }}</span> -->
-                            </p>
+                            </p> -->
                         </div>
                         <div>
                             <p class="text-red-600 block font-bold text-sm">
@@ -161,7 +161,7 @@
           <tr class="text-size data-row text-900">
             <td>{{ dataItem.stage_no }}</td>
             <td>{{ dataItem.stage }}</td>
-            <td>AQUA 1000ml</td>
+            <td>ACG</td>
             <!-- <td style="width: auto;">{{ dataItem.mc_on_hours }}</td> -->
             <td style="width: auto;">{{ totalOnTime }}</td>
             <!-- <td style="width: auto">{{ dataItem.mc_idle_hours }}</td> -->

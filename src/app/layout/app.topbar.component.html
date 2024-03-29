@@ -21,13 +21,14 @@
 
     <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
 
-            <!-- <button class="p-link flex justify-content-center align-items-center" style="background-color: #2A323D;">
-                <img src="assets/layout/images/Hamilton1.png" alt="logo" width="60%" height="100%">
-            </button> -->
+        <div class="flex justify-content-end align-items-center">
+            <img src="assets/layout/images/Shindengen_logo.png" alt="logo" width="40%" height="50%">
+        </div>
 
-            <div class="flex justify-content-center align-items-center">
-                <span class="font-bold">Shindengen India Pvt Ltd</span>
-            </div>
+        <div class="flex justify-content-center align-items-center">
+            <span class="font-bold">Shindengen India Pvt Ltd</span>
+        </div>
+
 
         <button pButton [pTooltip]="isFullscreen ? 'Exit full screen (f)' : 'Full screen (f)'" tooltipPosition="bottom" class="p-link layout-topbar-button" (click)="toggleFullscreen()">
             <i [ngClass]="{'fa-expand': !isFullscreen, 'fa-compress': isFullscreen}" class="fas"></i>

@@ -85,6 +85,9 @@ import { DailyTargetComponent } from './components/report2/daily-target/daily-ta
 import { WeeklyTargetComponent } from './components/report2/weekly-target/weekly-target.component';
 import { MonthlyTargetComponent } from './components/report2/monthly-target/monthly-target.component';
 import { ApiUrlComponent } from './components/config/api-url/api-url.component';
+import { LineDashboardComponent } from './components/dashboard/line-dashboard/line-dashboard.component';
+import { PlantDashboardComponent } from './components/dashboard/plant-dashboard/plant-dashboard.component';
+import { MachineDashboardComponent } from './components/dashboard/machine-dashboard/machine-dashboard.component';
 
 
 
@@ -218,6 +221,11 @@ import { ApiUrlComponent } from './components/config/api-url/api-url.component';
 
                     // API URL
                     { path: 'api_url', component: ApiUrlComponent },
+
+                    // Dashboards
+                    { path: 'line_dash', component: LineDashboardComponent },
+                    { path: 'plant_dash', component: PlantDashboardComponent },
+                    { path: 'machine_dash', component: MachineDashboardComponent },
                 ]
             },
             { path: 'auth', loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },

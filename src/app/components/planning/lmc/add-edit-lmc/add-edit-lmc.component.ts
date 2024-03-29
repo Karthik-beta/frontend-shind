@@ -55,19 +55,19 @@ export class AddEditLmcComponent implements OnInit {
       // this.startDate = '2023-10-19';
       // this.selectedTime = '06:00';
       this.companies = [
-        { name: 'Hamilton' },
+        { name: 'Shindengen' },
       ],
       this.plant = [
-        { name: 'Chennai' },
+        { name: 'Bangalore' },
       ],
       this.shopfloor = [
-        { name: 'Shopfloor -1' },
+        { name: 'Production' },
       ],
       this.assembly_line = [
-        { name: 'Assembly Line -1' },
+        { name: 'Line - 1' },
       ],
       this.machine_id = [
-        { name: 'SG05-250T'},
+        { name: 'SMT LINE 6'},
       ],
       this.shifts = [
         { name: 'Shift FS'},

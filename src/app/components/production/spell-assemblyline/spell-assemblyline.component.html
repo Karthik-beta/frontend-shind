@@ -44,12 +44,12 @@
 
                     <p-selectButton [options]="stateOptions" [(ngModel)]="showElements" optionLabel="label" optionValue="value"></p-selectButton>
 
-                    <div class="clock-body">
-                        <div>
-                            <p class="text-red-600 block font-bold text-xl">
+                    <div class="flex justify-content-center align-items-center">
+                        <div class="flex justify-content-center align-items-center">
+                            <span class="clock font-bold text-900 block">{{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}</span>
+                            <!-- <p class="text-900 block font-bold font-large text-xl">
                                 {{ currentDate | date: 'HH : mm : ss':'Asia/Kolkata'  }}
-                                <!-- <span style="font-size: small;">{{ currentDate | date: ' a':'Asia/Kolkata' }}</span> -->
-                            </p>
+                            </p> -->
                         </div>
                         <div>
                             <p class="text-red-600 block font-bold text-sm">

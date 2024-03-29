@@ -42,6 +42,8 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { KeyFilterModule } from 'primeng/keyfilter';
+import { FieldsetModule } from 'primeng/fieldset';
+import { MeterGroupModule } from 'primeng/metergroup';
 
 
 import { MaterialComponent } from './components/wip/material/material.component';
@@ -126,6 +128,9 @@ import { DailyTargetComponent } from './components/report2/daily-target/daily-ta
 import { WeeklyTargetComponent } from './components/report2/weekly-target/weekly-target.component';
 import { MonthlyTargetComponent } from './components/report2/monthly-target/monthly-target.component';
 import { ApiUrlComponent } from './components/config/api-url/api-url.component';
+import { LineDashboardComponent } from './components/dashboard/line-dashboard/line-dashboard.component';
+import { PlantDashboardComponent } from './components/dashboard/plant-dashboard/plant-dashboard.component';
+import { MachineDashboardComponent } from './components/dashboard/machine-dashboard/machine-dashboard.component';
 
 
 
@@ -145,7 +150,7 @@ import { ApiUrlComponent } from './components/config/api-url/api-url.component';
         QualityDashboardComponent, ProdPlantwiseComponent, ProdAssemblylinewiseComponent, OeeReportComponent, ProdPlanReportComponent,
         ProdLineConfigComponent, ProdAndonReportComponent, DailyInfoComponent, MonthlyInfoComponent, QualityManagementReportComponent,
         ProdInfoComponent, SkillMatrixComponent, BatchComponent, PoNoComponent, ShiftConfigComponent, MachineDetailsComponent,
-        QcCheckTypeComponent, ProdStatsComponent, FoodPriceComponent, SoloAssemblylineComponent, AddEditSoloAssemblylineComponent, QcDefectTypeComponent, QualityInspectionComponent, SpellAssemblylineComponent, AddEditSpellAssemblylineComponent, MachineDetailQualityComponent, DigitalQualityInspectionComponent, MachineDetailQuality2Component, SoloPlantComponent, SoloShopfloorComponent, DailyTargetComponent, WeeklyTargetComponent, MonthlyTargetComponent, ApiUrlComponent,
+        QcCheckTypeComponent, ProdStatsComponent, FoodPriceComponent, SoloAssemblylineComponent, AddEditSoloAssemblylineComponent, QcDefectTypeComponent, QualityInspectionComponent, SpellAssemblylineComponent, AddEditSpellAssemblylineComponent, MachineDetailQualityComponent, DigitalQualityInspectionComponent, MachineDetailQuality2Component, SoloPlantComponent, SoloShopfloorComponent, DailyTargetComponent, WeeklyTargetComponent, MonthlyTargetComponent, ApiUrlComponent, LineDashboardComponent, PlantDashboardComponent, MachineDashboardComponent,
     ],
     imports: [
         AppRoutingModule,
@@ -178,6 +183,8 @@ import { ApiUrlComponent } from './components/config/api-url/api-url.component';
         ToastModule,
         TooltipModule,
         KeyFilterModule,
+        FieldsetModule,
+        MeterGroupModule,
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

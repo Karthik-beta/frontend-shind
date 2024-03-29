@@ -1,0 +1,42 @@
+.status-bubble {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+
+
+.alert-badge {
+    border-radius: var(--border-radius);
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.alert-badge {
+    &.status-0 {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-red {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-blue {
+        background: #6366f1;
+        color: #ffffff;
+    }
+}

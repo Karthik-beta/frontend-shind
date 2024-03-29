@@ -35,10 +35,10 @@ export class LoginComponent {
 
     navigateIfMatch(): void {
         switch (true) {
-            case this.username === 'hamilton' && this.password === 'hamilton':
-                // Navigate to /dashboard if username and password are both 'hamilton'
-                this.router.navigate(['/dashboard']);
-                break;
+            // case this.username === 'hamilton' && this.password === 'hamilton':
+            //     // Navigate to /dashboard if username and password are both 'hamilton'
+            //     this.router.navigate(['/dashboard']);
+            //     break;
 
             case this.username === 'admin' && this.password === 'admin':
                 // Navigate to another route if username and password match another combination
@@ -46,6 +46,11 @@ export class LoginComponent {
                 break;
 
             case this.username === 'superuser' && this.password === 'superuser':
+                // Navigate to another route if username and password match another combination
+                this.router.navigate(['/dashboard']);
+                break;
+
+            case this.username === 'shindengen' && this.password === 'shindengen@123':
                 // Navigate to another route if username and password match another combination
                 this.router.navigate(['/dashboard']);
                 break;
